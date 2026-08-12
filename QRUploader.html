@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>QR Uploader - ShopGrocery</title>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+  <link rel="icon" type="x-icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/QRuploader.css">
+</head>
+
+<body>
+
+  <body>
+    <section class="container-QR">
+      <div class="container">
+        <h2>Upload Delivery QR</h2>
+        <label for="deliveryName">Delivery Guy Name:</label>
+        <input type="text" id="deliveryName" placeholder="Enter name" />
+
+        <label for="vehicleNumber">Vehicle Number:</label>
+        <input type="text" id="vehicleNumber" placeholder="Enter vehicle number" />
+
+        <label for="qrImage">Upload Scanned QR Code Image:</label>
+        <input type="file" id="qrImage" accept="image/*" />
+
+        <button onclick="processQR()" id="delivered">Submit</button>
+        <label>OR Capture QR Code Using Camera:</label>
+        <button onclick="startCamera()">Capture QR Code</button>
+
+      </div>
+      <div class="container" id="video-appear">
+        <h2>Show Your QR code to the camera</h2>
+        <video id="video" width="300" height="300" autoplay style="display:none;"></video>
+        <canvas id="canvas"></canvas>
+        <button onclick="processQR()" id="delivered">Submit</button>
+      </div>
+    </section>
+  </body>
+  <script src="js/deliveryguy.js"></script>
+  <script src="js/trakobjactive.js"></script>
+
+</html>

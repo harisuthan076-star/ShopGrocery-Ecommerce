@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopGrocery</title>
+  <link rel="stylesheet" href="css/deliverytaker.css" />
+  <link rel="icon" type="x-icon" href="img/logo.png">
+
+  <link rel="stylesheet" type="text/css" href="css/order.css">
+  <link rel="stylesheet" href="css/salsedash.css.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="img/white-logo.png" alt="">
+      <span class="logo_name">ShopGrocery</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="salesDashBoard.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="order.html" >
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="analytic.html">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="stock.html">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="delivertTaker.html" class="active">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Delivery Option</span>
+        </a>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="message.html">
+          <i class='bx bx-message'></i>
+          <span class="links_name">Messages</span>
+          <span class="notify">6</span>
+        </a>
+      </li>
+      <li>
+        <a href="DeliverdProduct.html">
+          <i class='bx bx-check'></i>
+          <span class="links_name">Confirmation</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" class="log-out" id="log-out" onclick="logout()"">
+              <i class='bx bx-log-out'></i>
+              <span class=" links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search'></i>
+      </div>
+      <div class="profile-details">
+        <img src="Shops/foodcity.jpeg" alt="">
+        <span class="admin_name">Food City</span>
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </nav>
+  </section>
+  <div class="container">
+    <h2>Delivery Option</h2>
+
+    <form id="deliveryForm" class="flex-form">
+      <div class="form-row">
+
+        <!-- LEFT SIDE -->
+        <div class="form-one">
+          <div class="form-group">
+            <label for="orderNumber">Customer Order Number:</label>
+            <input type="text" id="orderNumber" required>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Delivery Man Name:</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div class="form-group photo-section">
+            <div class="video-wrapper">
+              <label>Live Camera:</label>
+              <video id="video" autoplay aria-required=""></video>
+              <button type="button" id="captureBtn">Capture</button>
+            </div>
+
+            <div class="preview-wrapper">
+              <label>Photo Preview:</label>
+              <canvas id="canvas" style="display: none;"></canvas>
+              <img id="photoPreview" alt="Captured Photo" />
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="form-two">
+          <div class="form-group">
+            <label for="vehicleNumber">Vehicle Number:</label>
+            <input type="text" id="vehicleNumber" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vehicleType">Vehicle Type:</label>
+            <select id="vehicleType" required>
+              <option value="">Select</option>
+              <option>Bike</option>
+              <option>Scooter</option>
+              <option>Car</option>
+              <option>Van</option>
+              <option>Truck</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="deliveryType">Delivery Type:</label>
+            <select id="deliveryType" required>
+              <option value="">Select</option>
+              <option>Standard</option>
+              <option>Express</option>
+              <option>Same Day</option>
+              <option>Next Day</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+
+  
+</body>
+<script src="js/taker.js"></script>
+<script src="js/dashboard.js"></script>
+</html>

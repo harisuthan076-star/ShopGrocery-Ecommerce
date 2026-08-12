@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopGrocery</title>
+  <link rel="icon" type="x-icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="css/discount.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/discountPayment.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1><i class='bx bxs-hot bx-tada' style="color:yellow;"></i> Foodcity Discounts</h1>
+    <p>Grab your favorite products at amazing discounts and enjoy extra savings with your card!</p> 
+
+  <div class="header-buttons">
+    <button class="back-home-btn" onclick="history.back()">Back to Home</button>
+
+    <button class="cart-icon" id="open-cart">
+      <i class='bx bx-cart bx-sm'></i>
+      <span id="cart-count">0</span>
+    </button>
+  </div>
+
+  </header>
+
+  <section class="product-grid">
+    <!-- Repeatable Product Card -->
+    <div class="product-card">
+      <img src="fresh products img/apple.jpeg" alt="Apple" />
+      <h3>Fresh Red Apples</h3>
+      <p class="description">Crisp and sweet apples from organic farms.</p> 
+      
+
+      <div class="price-row">
+        <span class="original-price">LKR.280.00</span>
+
+        <span class="discounted-price">LKR.87.00</span>
+
+      </div>
+
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+
+      
+
+
+      <span class="discount-badge">37% OFF</span>
+
+
+      <button class="add-to-cart">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product-card">
+      <img src="fresh products img/milk.jpeg" alt="Milk" />
+      <h3>Kothmale Milk (1L)</h3>
+      <p class="description">Fresh dairy milk sourced from grass-fed cows.</p> 
+      
+
+      <div class="price-row">
+        <span class="original-price">LKR.210.00</span>
+
+        <span class="discounted-price">LKR.180.00</span>
+
+      </div>
+
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+            class='bx bxs-star'></i>
+        </span>
+
+      </div>
+
+
+      
+
+
+      <span class="discount-badge">20% OFF</span>
+
+      
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product-card">
+      <img src="fresh products img/magarine.jpeg" alt="Magarine" />
+      <h3>Astra Magarine (500g)</h3>
+      <p class="description">Premium Astra Magarine.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.450.00</span>
+
+        <span class="discounted-price">LKR.323.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">Only 5 left</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+      <span class="discount-badge">27% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product-card">
+      <img src="fresh products img/eggs.jpeg" alt="Eggs" />
+      <h3>Eggs (12 pcs)</h3>
+      <p class="description">Cage-free, farm-fresh eggs packed with nutrients.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.576.00</span>
+
+        <span class="discounted-price">LKR.345.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock out-of-stock">Out of Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+      <span class="discount-badge">30% OFF</span>
+
+      <button class="add-to-cart" disabled>Out of Stock</button>
+    </div>
+
+
+    <!-- Banana -->
+    <div class="product-card">
+      <img src="fresh products img/banana.png" alt="Banana" />
+      <h3>Fresh Bananas (1kg)</h3>
+      <p class="description">Sweet, ripe bananas great for snacks or smoothies.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.150.00</span>
+
+        <span class="discounted-price">LKR.99.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+
+      <span class="discount-badge">34% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <!-- Leeks -->
+    <div class="product-card">
+      <img src="fresh products img/leeks.jpeg" alt="Leeks" />
+      <h3>Fresh Leeks (250g)</h3>
+      <p class="description">Clean and green leeks for soups and sautés.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.120.00</span>
+
+        <span class="discounted-price">LKR.84.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+
+      <span class="discount-badge">30% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <!-- Potato -->
+    <div class="product-card">
+      <img src="fresh products img/potato.jpeg" alt="Potato" />
+      <h3>Potatoes (1kg)</h3>
+      <p class="description">Farm fresh potatoes ideal for all your cooking needs.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.180.00</span>
+
+        <span class="discounted-price">LKR.129.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i class='bx bx-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+
+      <span class="discount-badge">28% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <!-- Cheese -->
+    <div class="product-card">
+      <img src="fresh products img/cheese.jpeg" alt="Cheese" />
+      <h3>Cheese (200g)</h3>
+      <p class="description">Delicious cheddar perfect for sandwiches or cooking.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.600.00</span>
+
+        <span class="discounted-price">LKR.450.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">Only 3 left</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+     
+
+      <span class="discount-badge">25% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <!-- Mango -->
+    <div class="product-card">
+      <img src="fresh products img/mango.jpeg" alt="Mango" />
+      <h3>Mangoes (1kg)</h3>
+      <p class="description">Sweet and juicy mangoes, perfect for the season.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.300.00</span>
+
+        <span class="discounted-price">LKR.210.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+            class='bx bxs-star-half'></i><i class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+      
+
+      <span class="discount-badge">30% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <!-- Kit-Kat -->
+    <div class="product-card">
+      <img src="topselling/kitkat.jpg" alt="Kit-Kat" />
+      <h3>Kit-Kat Chocolate (4 finger)</h3>
+      <p class="description">Crispy wafers covered in smooth milk chocolate.</p> 
+      
+      <div class="price-row">
+        <span class="original-price">LKR.150.00</span>
+
+        <span class="discounted-price">LKR.110.00</span>
+
+      </div>
+
+      <div class="info-row">
+        <span class="stock">In Stock</span>
+
+        <span class="rating">
+          <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i
+            class='bx bx-star'></i>
+        </span>
+
+      </div>
+
+     
+      <span class="discount-badge">27% OFF</span>
+
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <div class="container payment-container" id="payment">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Sri Hari">
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="unknown123@gmail.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Street - Locality">
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" placeholder="Nawalapitiya">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span> Distric :</span>
+                            <input type="text" placeholder="Kandy">
+                        </div>
+                        <div class="input-box">
+                            <span>Zip Code :</span>
+                            <input type="number" placeholder="22000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box cards">
+                        <span>Cards Accepted :</span>
+                        <img src="Cards/boc credit.jpg" alt="BOC">
+                        <img src="Cards/commercial credit.png" alt="">
+                        <img src="Cards/HNB card.png" alt="">
+                        <img src="Cards/HSBC card.jpg" alt="">
+                        <img src="Cards/sampath.png" alt="">
+
+                        
+                        <div class="cards-name">
+                          <span>BOC</span>
+                          <span>Commercial</span>
+                          <span>HNB</span>
+                          <span>HSBC</span>
+                          <span>Sampath</span>
+                        </div>
+                        <div class="cards-discount">
+                          <span>17% Discount </span>
+                          <span>10% Discount </span>
+                          <span>22% Discount </span>
+                          <span>08% Discount </span>
+                          <span>13% Discount </span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" placeholder="Mr. S . Hari">
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="number" placeholder="1111 2222 3333 4444">
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <input type="date" placeholder="December">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>delivery Option :</span>
+                            <input type="text" placeholder="Domex">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn buy-btn-discount" id="close-payment">Submit</button>
+        </form>
+  </div>
+
+  <!-- Cart Section -->
+<section id="cart-section" class="cart-section">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="close-cart"><i class='bx bx-x'></i></button>
+  </div>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <strong>Total:</strong> LKR <span id="cart-total">0.00</span>
+    
+  </div>
+
+  <button class="btn-buy" onclick="openPopup()">Buy Now</button>
+
+</section>
+
+
+
+
+
+</body>
+<script src="js/discount.js"></script>
+
+
+
+
+
+</html>

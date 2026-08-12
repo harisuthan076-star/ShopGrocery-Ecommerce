@@ -1,0 +1,145 @@
+/* === NOTIFICATION LIST === */
+
+.notify-me{
+    position: absolute;
+    left: 16%;
+    top: 10%;
+    width: 100%;
+    
+}
+
+#notificationsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+  padding: 0;
+}
+
+/* Each notification bar item */
+.notification-bar {
+    
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-left: 5px solid #4c6faf;
+  padding: 14px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.notification-bar span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+/* View button in notification */
+.notification-bar button {
+  background-color: #321d99;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.notification-bar button:hover {
+  background-color: #38598e;
+}
+
+
+/* === DELIVERY DETAILS CARD === */
+.delivered-Confirmation {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #664caf;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.delivered-Confirmation.active {
+  display: flex;
+}
+
+.delivered-Confirmation h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Info box for each field */
+.info-box {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.info-box strong {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info-box pre,
+.info-box div {
+  background-color: #f5f5f5;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+
+/* === BUTTON GROUP === */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button-group .close-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.button-group .close-btn:hover {
+  background-color: #c0392b;
+}
+
+.button-group button:not(.close-btn) {
+  background-color: #3498db;
+  color: white;
+}
+
+.button-group button:not(.close-btn):hover {
+  background-color: #2980b9;
+}

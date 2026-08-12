@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Your Product - ShopGrocery</title>
+    <link rel="stylesheet" href="css/trackproduct.css" />
+    <link rel="icon" type="x-icon" href="img/logo.png">
+    <!-- Font Awesome CDN (latest stable version 6) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <style>
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Track Your Product</h2>
+
+        <!-- Order Status Timeline -->
+        <div class="status-timeline">
+            <div class="status-step active" id="stepPlaced">
+                <div class="status-icon"><i class='fas fa-check-circle'></i></div>
+                <div class="status-label">Order Placed</div>
+            </div>
+            <div class="status-step" id="stepReady">
+                <div class="status-icon"><i class="fas fa-clock"></i></div>
+                <div class="status-label">Getting Ready</div>
+            </div>
+
+            <div class="status-step" id="stepPacked">
+                <div class="status-icon"><i class='fas fa-box'></i></div>
+                <div class="status-label">Ready to Deliver</div>
+            </div>
+            <div class="status-step" id="stepOut">
+                <div class="status-icon"><i class='fas fa-truck'></i></div>
+                <div class="status-label">Out for Delivery</div>
+            </div>
+            <div class="status-step" id="stepDelivered">
+                <div class="status-icon"><i class='fas fa-box-open'></i></div>
+                <div class="status-label">Delivered</div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Delivery Guy Details -->
+        <div class="delivery-details">
+            <h3>Delivery Guy Details</h3>
+            <div class="detail-card" id="detailCard">
+                <img src="https://via.placeholder.com/100" alt="Delivery Guy" id="trackPhoto">
+                <div class="detail-info">
+                    <p><strong>Ordernumber:</strong> <span id="ordernumber"></span></p>
+                    <p><strong>Name:</strong> <span id="trackName"></span></p>
+                    <p><strong>Vehicle Number:</strong> <span id="trackVehicleNumber"></span></p>
+                </div>
+                <div class="detail-info">
+                    <p><strong>Vehicle Type:</strong> <span id="trackVehicleType"></span></p>
+                    <p><strong>Delivery Type:</strong> <span id="DeliveryType"></span></p>
+                    <p><strong>Phone:</strong> <span id="trackPhone">Not Provided</span></p>
+                </div>
+            </div>
+            <button onclick="removeDeliveryDetails()" class="remove-btn">Remove Delivery Details</button>
+
+        </div>
+
+        
+        <!-- Geolocation Tracker -->
+        <div class="geo-section">
+            <h4>Live Location</h4>
+            <p class="geo-status" id="geoLocation">Fetching location...</p>
+        </div>
+    </div>
+
+
+
+    
+
+
+</body>
+<script src="js/trackProduct.js"></script>
+<script src="js/trakobjactive.js"></script>
+
+
+
+
+
+
+
+</html>

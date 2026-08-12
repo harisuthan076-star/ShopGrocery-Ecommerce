@@ -1,0 +1,97 @@
+ * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #222;
+    }
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 800px;
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    .container-QR{
+      background-color: #2222223b;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      max-width: 800px;
+
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #4a3f6f;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #555;
+      cursor: pointer;
+    }
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1.8px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="file"]:focus {
+      border-color: #6c5ce7;
+      outline: none;
+      box-shadow: 0 0 8px rgba(108, 92, 231, 0.5);
+    }
+    button {
+      width: 100%;
+      margin-top: 28px;
+      background: #6c5ce7;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 14px 0;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #5941d8;
+    }
+
+    .container video{
+      border: 1px solid #222;
+      width: 280px;
+      height: 200px;
+    }
+    
+    
+    #canvas {
+      display: none;
+    }
+
+    
+    

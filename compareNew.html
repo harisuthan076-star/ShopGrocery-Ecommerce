@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopGrocery</title>
+  <link rel="icon" type="x-icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/compareNew.css" />
+  
+</head>
+
+<body>
+
+  <header>
+    <h1 class="logo"><i class="fas fa-shopping-basket"></i> ShopGrocery</h1>
+    <nav class="navbar">
+      <a href="home.html" style="text-decoration: none;">home</a>
+      <a href="TrackYourProduct.html" style="text-decoration: none;">Track Product</a>
+      <a href="#My Account" href="javascript:void(0);" onclick="toggleAccount()" style="text-decoration: none;">My Account</a>
+    </nav>
+    <button class="cart-toggle" aria-label="Open Cart" id="cartToggleBtn"><i class="fas fa-shopping-cart"></i> Cart
+      (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main>
+    <h2 class="heading heading-one"> Fresh <span>Products</span></h2>
+
+    <section class="products" aria-label="Available Products">
+
+      <div class="product" data-id="p1" data-name="Mango (1PCS)" data-image="fresh products img/mango.jpeg">
+        <img src="fresh products img/mango.jpeg" alt="Mango" class="product-image" />
+        <h2>Mango (1PCS)</h2>
+        <p class="base-price">Base Price: <span>LKR.430.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="430.00">Food City: LKR.430.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="265.00">Araliya: LKR.265.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="230.00">Arpico: LKR.230.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p2" data-name="Apple (1PCS)" data-image="fresh products img/apple.jpeg">
+        <img src="fresh products img/apple.jpeg" alt="Apple" class="product-image" />
+        <h2>Apple (1PCS)</h2>
+        <p class="base-price">Base Price: <span>LKR.460.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="460.00">Food City: LKR.460.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="245.00">Araliya: LKR.245.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="230.00">Arpico: LKR.230.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p3" data-name="Cabage (1kg) " data-image="fresh products img/cabage.jpeg">
+        <img src="fresh products img/cabage.jpeg" alt="Cabage" class="product-image" />
+        <h2>Cabage (1kg) </h2>
+        <p class="base-price">Base Price: <span>LKR.460.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="460.00">Food City: LKR.460.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="400.00">Araliya: LKR.400.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="398.00">Arpico: LKR.398.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p4" data-name="Banana (1Kg) " data-image="fresh products img/banana.png">
+        <img src="fresh products img/banana.png" alt="Banana" class="product-image" />
+        <h2>Banana (1Kg) </h2>
+        <p class="base-price">Base Price: <span>LKR.1200.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="1200.00">Food City: LKR.1200.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="1320.00">Araliya: LKR.1320.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="1100.00">Arpico: LKR.1100.00 <button class="add-cart-btn">Add</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p5" data-name="Leaks (500g)" data-image="fresh products img/leeks.jpeg">
+        <img src="fresh products img/leeks.jpeg" alt="Leaks" class="product-image" />
+        <h2>Leaks (500g) </h2>
+        <p class="base-price">Base Price: <span>LKR.250.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="1200.00">Food City: LKR.1200.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="1320.00">Araliya: LKR.1320.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="1100.00">Arpico: LKR.1100.00 <button class="add-cart-btn">Add</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p6" data-name="Brinjal (250g)" data-image="fresh products img/brinjal.jpeg">
+        <img src="fresh products img/brinjal.jpeg" alt="Brinjal" class="product-image" />
+        <h2> Brinjal(250g)</h2>
+        <p class="base-price">Base Price: <span>LKR.400.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="400.00">Food City: LKR.400.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="430.00">Araliya: LKR.430.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="460.00">Arpico: LKR.460.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p7" data-name="Tomoto (500g)" data-image="fresh products img/tomoto.jpeg">
+        <img src="fresh products img/tomoto.jpeg" alt="Tomoto" class="product-image" />
+        <h2>Tomoto (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.800.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="800.00">Food City: LKR.800.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="720.00">Araliya: LKR.720.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="810.00">Arpico: LKR.810.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p8" data-name="Pototo (500g)" data-image="fresh products img/potato.jpeg">
+        <img src="fresh products img/potato.jpeg" alt="Pototo" class="product-image" />
+        <h2>Pototo (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.260.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="260.00">Food City: LKR.260.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="320.00">Araliya: LKR.320.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="300.00">Arpico: LKR.300.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p9" data-name="Pinnapple (500g)" data-image="fresh products img/pinnapple.jpeg">
+        <img src="fresh products img/pinnapple.jpeg" alt="Pinnapple " class="product-image" />
+        <h2>Pinnapple (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.360.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="360.00">Food City: LKR.360.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="310.00">Araliya: LKR.310.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="300.00">Arpico: LKR.300.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p10" data-name="WaterMellone (500g)"
+        data-image="fresh products img/watermellone.jpeg">
+        <img src="fresh products img/watermellone.jpeg" alt="WaterMellone " class="product-image" />
+        <h2>WaterMellone (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.300.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="300.00">Food City: LKR.300.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="310.00">Araliya: LKR.310.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="340.00">Arpico: LKR.340.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p11" data-name="Black Grapes (500g)"
+        data-image="fresh products img/black grape.jpeg">
+        <img src="fresh products img/black grape.jpeg" alt="Black Grapes " class="product-image" />
+        <h2>Black Grapes (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.300.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="300.00">Food City: LKR.300.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="310.00">Araliya: LKR.310.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="340.00">Arpico: LKR.340.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p12" data-name="Carrot (500g)" data-image="fresh products img/carrot.png">
+        <img src="fresh products img/carrot.png" alt="Carrot " class="product-image" />
+        <h2>Carrot (500g)</h2>
+        <p class="base-price">Base Price: <span>LKR.300.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="300.00">Food City: LKR.300.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="310.00">Araliya: LKR.310.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="340.00">Arpico: LKR.340.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <h2 class="heading"> Bakery <span>Products</span></h2>
+    <h2 class="sub-heading"> Breads</h2>
+    <section class="products" aria-label="Available Products">
+
+      <div class="product" data-id="p1" data-name="White Bread (1Pack)" data-image="Bakery & Dairy/white bread.webp">
+        <img src="Bakery & Dairy/white bread.webp" alt="White Bread" class="product-image" />
+        <h2>White Bread (1Pack)</h2>
+        <p class="base-price">Base Price: <span>LKR.230.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="230.00">Food City: LKR.230.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="265.00">Araliya: LKR.265.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="235.00">Arpico: LKR.235.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p2" data-name="Whole wheat bread (1 full)"
+        data-image="Bakery & Dairy/Whole wheat bread.jpeg">
+        <img src="Bakery & Dairy/Whole wheat bread.jpeg" alt="Whole wheat bread " class="product-image" />
+        <h2>Whole wheat bread (1 full)</h2>
+        <p class="base-price">Base Price: <span>LKR.130.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="130.00">Food City: LKR.130.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="215.00">Araliya: LKR.215.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="120.00">Arpico: LKR.120.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p3" data-name="Multigrain bread (1 full) "
+        data-image="Bakery & Dairy/Multigrain bread.png">
+        <img src="Bakery & Dairy/Multigrain bread.png" alt="Multigrain bread " class="product-image" />
+        <h2>Multigrain bread (1 full) </h2>
+        <p class="base-price">Base Price: <span>LKR.210.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="210.00">Food City: LKR.210.00 <button
+                class="add-cart-btn">Add</button></li>
+            <li data-shop="Araliya" data-price="230.00">Araliya: LKR.230.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Arpico" data-price="220.00">Arpico: LKR.220.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p4" data-name="Buns and rolls (1Pcs) "
+        data-image="Bakery & Dairy/Buns and rolls.jpeg">
+        <img src="Bakery & Dairy/Buns and rolls.jpeg" alt="Buns and rolls" class="product-image" />
+        <h2>Buns and rolls (1Pcs) </h2>
+        <p class="base-price">Base Price: <span>LKR.80.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="80.00">Food City: LKR.80.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Araliya" data-price="75.00">Araliya: LKR.75.00 <button class="add-cart-btn">Add</button></li>
+            <li data-shop="Arpico" data-price="55.00">Arpico: LKR.55.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product" data-id="p5" data-name="Sourdough (1Pcs)" data-image="Bakery & Dairy/Sourdough.jpg">
+        <img src="Bakery & Dairy/Sourdough.jpg" alt="Sourdough" class="product-image" />
+        <h2>Sourdough (1Pcs) </h2>
+        <p class="base-price">Base Price: <span>LKR.50.00</span></p>
+        <div class="actions">
+          <button class="compare-btn">Compare Prices</button>
+        </div>
+        <div class="compare-view hidden">
+          <span>Shop Prices:</span>
+          <ul>
+            <li data-shop="Food City" data-price="50.00">Food City: LKR.50.00 <button class="add-cart-btn">Add</button>
+            </li>
+            <li data-shop="Araliya" data-price="30.00">Araliya: LKR.30.00 <button class="add-cart-btn">Add</button></li>
+            <li data-shop="Arpico" data-price="100.00">Arpico: LKR.100.00 <button class="add-cart-btn">Add</button></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </section>
+  </main>
+
+  <div class="cart-panel hidden" id="cartPanel" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCartBtn" aria-label="Close Cart">✖</button>
+    </div>
+    <div class="cart-items" id="cartItems">Your cart is empty.</div>
+    <button class="btn-buy" onclick="openPopup()">Buy Now</button>
+
+    <button id="generateBillBtn" class="generate-bill-btn" disabled>Get your Bill</button>
+    <button id="downloadBillBtn" class="download-bill-btn" disabled>Download Your Bill</button>
+    <div id="billOutput" class="bill-output"></div>
+  </div>
+
+  <div class="container" id="payment">
+    <form>
+      <div class="row">
+        <div class="column">
+          <h3 class="title">Billing Address</h3>
+          <div class="input-box">
+            <span>Full Name :</span>
+            <input type="text" id="fullname" placeholder="Sri Hari">
+          </div>
+          <div class="input-box">
+            <span>Email :</span>
+            <input type="email" id="email" placeholder="unknown123@gmail.com">
+          </div>
+          <div class="input-box">
+            <span>Mobile :</span>
+            <input type="number" id="contact" placeholder="+94 123 456 7890">
+          </div>
+          <div class="input-box">
+            <span>Address :</span>
+            <input type="text" id="address" placeholder="Street - Locality">
+          </div>
+          <div class="input-box">
+            <span>City :</span>
+            <input type="text" id="city" placeholder="Nawalapitiya">
+          </div>
+          <div class="flex">
+            <div class="input-box">
+              <span>District :</span>
+              <input type="text" id="district" placeholder="Kandy">
+            </div>
+            <div class="input-box">
+              <span>Zip Code :</span>
+              <input type="number" id="zip" placeholder="22000">
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <h3 class="title">Payment</h3>
+          <div class="input-box">
+            <span>Cards Accepted :</span>
+            <img src="image/imgcards.png" alt="">
+          </div>
+          <div class="input-box">
+            <span>Name On Card :</span>
+            <input type="text" id="cardname" placeholder="Mr. S . Hari">
+          </div>
+          <div class="input-box">
+            <span>Credit Card Number :</span>
+            <input type="number" placeholder="1111 2222 3333 4444">
+          </div>
+          <div class="input-box">
+            <span>Exp. Month :</span>
+            <input type="date">
+          </div>
+          <div class="flex">
+            <div class="input-box">
+              <span>Delivery Option :</span>
+              <select name="delivery" id="Deli-opti">
+                <option value="Domex">Domex</option>
+                <option value="Uber">Uber</option>
+                <option value="Pick-me">Pick-me</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span>CVV :</span>
+              <input type="number" placeholder="1234">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn qr-gen" onclick="generateQR(event)">Submit</button>
+    </form>
+
+    <!-- QR Code Popup -->
+    <!--<div id="qrPopup">
+      <div id="subpopup">
+        <span onclick="closeQRPopup()">&times;</span>
+        <div class="qr-content">
+          <div class="qr-text">
+            <h3>Scan QR Code by your Delivery Service</h3>
+            <div id="qrcode"></div>
+          </div>
+          <div class="download-buttons">
+            <h3> Download QR code (.png or .pdf)</h3>
+            <button onclick="downloadQRImage()">Download Image</button>
+            <button onclick="downloadQRPdf()">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+  <!--<script src="js/QR.js"></script>-->
+  <script src="js/payment.js"></script>
+</body>
+
+</html>

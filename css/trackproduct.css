@@ -1,0 +1,218 @@
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main Title */
+.container h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Status Timeline */
+.status-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.status-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.status-step::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: -50%;
+  width: 100%;
+  height: 4px;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.status-step.active::after {
+  background-color: #3498db;
+}
+
+.status-step:last-child::after {
+  display: none;
+}
+
+.status-icon i {
+  font-size: 26px;
+  color: #555555;
+  transition: color 0.3s ease;
+}
+
+.status-step.active .status-icon i {
+  color: #2ecc71;
+}
+
+
+
+
+.status-label {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Delivery Details Section */
+.delivery-details {
+  background-color: #f4f9fc;
+  border-left: 6px solid #2980b9;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.delivery-details h3 {
+  font-size: 22px;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.detail-card {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.detail-card img#trackPhoto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3498db;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card img#trackPhoto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #34495e;
+}
+
+.detail-info strong {
+  color: #2c3e50;
+}
+
+/* Geo Location Section */
+.geo-section {
+  background-color: #fefefe;
+  border-left: 6px solid #16a085;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.geo-section h4 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.geo-status {
+  font-size: 15px;
+  color: #555;
+  background-color: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .status-timeline {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .status-step::after {
+    display: none;
+  }
+
+  .detail-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail-card img {
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+.blinking {
+    animation: blink 1s infinite;
+    .status-icon i {
+  font-size: 26px;
+  color: #12aa2e;
+  transition: color 0.3s ease;
+}
+    
+}
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.remove-btn {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 80%;
+}
+.remove-btn:hover {
+    background-color: #c9302c;
+}
+
+/* TrackYourProduct.css */
+
